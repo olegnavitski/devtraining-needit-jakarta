@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Integer" max_length="10" name="integer" type="integer"/>
+        <element label="When needed" mandatory="true" max_length="40" name="u_glide_date_4" type="glide_date"/>
+        <element label="Request for" max_length="32" name="u_request_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Legal" sequence="0" value="legal"/>
+                <element label="Government" sequence="1" value="government"/>
+                <element label="Corporate" sequence="2" value="corporate"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legalone" label="Type" mandatory="true" max_length="40" name="u_type" type="string">
+            <choice>
+                <element label="Legal 1" sequence="0" value="legalone"/>
+                <element label="Legal 2" sequence="1" value="Legaltwo"/>
+                <element label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_time"/>
+    </element>
+</database>
